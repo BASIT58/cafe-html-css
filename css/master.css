@@ -1,10 +1,34 @@
+:root {
+    --color-primary: rgb(98, 44, 25);
+    --color-secondary: blanchedalmond;
+    --color-page-bg: #e9ecef;
+    --color-surface: #ffffff;
+    --color-card-bg: #fdfbf7;
+    --color-card-border: #e8d5c4;
+    --color-text-muted: #555555;
+    --color-input-border: #cccccc;
+    --color-link-hover: rgb(0, 0, 0);
+    --color-hover-bg: rgba(98, 44, 25, 0.1);
+    --color-shadow: rgba(0, 0, 0, 0.05);
+    --fs-base: 1rem;
+    --fs-small: 0.95rem;
+    --fs-link: 1.1rem;
+    --fs-h1: 2.2rem;
+    --fs-h2: 1.6rem;
+    --fs-h3: 1.3rem;
+    --fs-h4: 1.1rem;
+
+    --focus-ring: 3px solid var(--color-primary);
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    background-color: #e9ecef;
+    background-color: var(--color-page-bg);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: var(--fs-base);
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -17,25 +41,26 @@ main {
 }
 
 header {
-    background-color: blanchedalmond;
+    background-color: var(--color-secondary);
     padding: 20px 15px 15px 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    border-bottom: 3px solid rgb(98, 44, 25);
+    border-bottom: 3px solid var(--color-primary);
     border-radius: 0 0 16px 16px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 10px var(--color-shadow);
 }
 
 h1 {
-    color: rgb(98, 44, 25);
+    color: var(--color-primary);
     margin: 0;
     text-align: center;
-    font-size: 2.2rem;
+    font-size: var(--fs-h1);
 }
 
-ul {
+.nav-list,
+header nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -45,52 +70,56 @@ ul {
     justify-content: center;
 }
 
-a {
-    color: rgb(98, 44, 25);
+.nav-link,
+header nav a {
+    color: var(--color-primary);
     text-decoration: none;
     display: inline-block;
-    font-size: 1.1rem;
+    font-size: var(--fs-link);
     padding: 6px 14px;
     border-radius: 20px;
     transition: all 0.3s ease;
 }
 
-a:hover {
-    color: rgb(0, 0, 0);
-    background-color: rgba(98, 44, 25, 0.1);
+.nav-link:hover,
+header nav a:hover,
+.contact-link:hover,
+main > a:hover {
+    color: var(--color-link-hover);
+    background-color: var(--color-hover-bg);
 }
 
-/* ==========================================
-   3. Sections & Typography
-   ========================================== */
 section {
-    background-color: #ffffff;
+    background-color: var(--color-surface);
     padding: 25px 30px;
     margin-bottom: 30px;
     border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px var(--color-shadow);
 }
 
 h2 {
-    color: rgb(98, 44, 25);
-    border-bottom: 2px solid blanchedalmond;
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-secondary);
     padding-bottom: 8px;
     margin-top: 0;
+    font-size: var(--fs-h2);
 }
 
-h3, h4 {
-    color: rgb(98, 44, 25);
+h3 {
+    color: var(--color-primary);
+    font-size: var(--fs-h3);
 }
 
-/* ==========================================
-   4. Images & Figures (إصلاح أبعاد الصور)
-   ========================================== */
+h4 {
+    color: var(--color-primary);
+    font-size: var(--fs-h4);
+}
+
 figure {
     margin: 20px 0;
     padding: 0;
 }
 
-/* التنسيق الصحيح لمنع مط الصورة وحفظ أبعادها الطبيعية */
 img {
     max-width: 100%;
     height: auto;
@@ -101,37 +130,48 @@ img {
 }
 
 figcaption {
-    font-size: 0.95rem;
-    color: #555;
+    font-size: var(--fs-small);
+    color: var(--color-text-muted);
     margin-top: 8px;
     font-style: italic;
 }
 
+.menu-grid,
+#menu:not(:has(.menu-grid)) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: start;
+}
+
+#menu:not(:has(.menu-grid)) > h2 {
+    grid-column: 1 / -1;
+}
 
 #menu article {
-    background-color: #fdfbf7;
-    border: 1px solid #e8d5c4;
+    background-color: var(--color-card-bg);
+    border: 1px solid var(--color-card-border);
     border-radius: 14px;
     padding: 20px;
-    margin-bottom: 25px;
+    margin: 0;
 }
 
 aside {
-    background-color: blanchedalmond;
+    background-color: var(--color-secondary);
     padding: 15px 20px;
     border-radius: 12px;
     margin-top: 15px;
-    border-left: 4px solid rgb(98, 44, 25);
+    border-left: 4px solid var(--color-primary);
 }
 
-aside ul, aside ol {
-    display: block;
+aside ul,
+aside ol {
     padding-left: 20px;
 }
 
 blockquote {
-    background-color: blanchedalmond;
-    border-left: 5px solid rgb(98, 44, 25);
+    background-color: var(--color-secondary);
+    border-left: 5px solid var(--color-primary);
     margin: 0;
     padding: 15px 20px;
     border-radius: 0 12px 12px 0;
@@ -142,16 +182,17 @@ blockquote p {
 }
 
 footer {
-    background-color: rgb(98, 44, 25);
-    color: blanchedalmond;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
     text-align: center;
     padding: 15px 0;
     margin-top: 40px;
     border-radius: 16px 16px 0 0;
 }
-/* ==========================================
-   Simple Contact Form (سيمبل ونظيف)
-   ========================================== */
+
+footer p {
+    margin: 0;
+}
 
 #contact-form {
     margin-top: 15px;
@@ -165,26 +206,24 @@ footer {
     width: 100%;
     padding: 10px;
     margin: 8px 0 15px 0;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-input-border);
     border-radius: 6px;
     font-family: inherit;
-    font-size: 1rem;
-    box-sizing: border-box;
+    font-size: var(--fs-base);
 }
 
-/* التنسيق للـ Checkbox عشان يفضل في سطر واحد هادي مع النص */
 .checkbox-group {
     display: flex;
     align-items: center;
     gap: 8px;
     margin-bottom: 15px;
-    font-size: 0.95rem;
+    font-size: var(--fs-small);
 }
 
 .checkbox-group input[type="checkbox"] {
     margin: 0;
-    width: 16px;
-    height: 16px;
+    width: 1rem;
+    height: 1rem;
 }
 
 .checkbox-group label {
@@ -193,12 +232,12 @@ footer {
 }
 
 #contact-form button[type="submit"] {
-    background-color: rgb(98, 44, 25);
-    color: blanchedalmond;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
     padding: 10px 20px;
     border: none;
     border-radius: 6px;
-    font-size: 1rem;
+    font-size: var(--fs-base);
     cursor: pointer;
     font-family: inherit;
 }
@@ -206,6 +245,60 @@ footer {
 #contact-form button[type="submit"]:hover {
     opacity: 0.9;
 }
-footer p {
-    margin: 0;
+
+.contact-link,
+main > a {
+    color: var(--color-primary);
+    text-decoration: none;
+    display: inline-block;
+    font-size: var(--fs-link);
+    padding: 6px 14px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:focus-visible,
+header nav a:focus-visible,
+.contact-link:focus-visible,
+main > a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+    .menu-grid,
+    #menu:not(:has(.menu-grid)) {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 0 12px;
+    }
+
+    section {
+        padding: 18px 16px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.35rem;
+    }
+
+    .nav-list,
+    header nav ul {
+        gap: 8px;
+    }
+
+    .nav-link,
+    header nav a {
+        font-size: var(--fs-base);
+        padding: 6px 10px;
+    }
 }

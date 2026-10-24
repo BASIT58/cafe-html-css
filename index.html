@@ -11,11 +11,11 @@
         <header>
             <h1>Welcome to Our Cafe</h1>
             <nav aria-label="Main Navigation">
-                <ul>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#best-drink">Best Drink</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
+                <ul class="nav-list">
+                    <li><a class="nav-link" href="#about">About Us</a></li>
+                    <li><a class="nav-link" href="#menu">Menu</a></li>
+                    <li><a class="nav-link" href="#best-drink">Best Drink</a></li>
+                    <li><a class="nav-link" href="#contact">Contact Us</a></li>
                 </ul>
             </nav>
         </header>
@@ -27,88 +27,170 @@
                     <img src="image/indoor.jpeg" alt="Cozy wooden seating and warm lighting inside our cafe">
                     <figcaption>We have been serving the community for over 10 years, bringing joy and warmth to everyone who walks through our doors.</figcaption>
                 </figure>
-                <p>We are a small cafe that serves delicious coffee and pastries. Our mission is to provide a cozy and welcoming environment for our customers to enjoy their favorite drinks and treats. Come visit us and experience the warmth of our cafe!</p>
+                <p>We are a small cafe that serves delicious coffee and pastries. Our mission is to provide a cozy and welcoming environment where our customers can enjoy their favorite drinks and treats. Come visit us and experience the warmth of our cafe!</p>
                 <p>Our menu features a variety of coffee drinks, including espresso, cappuccino, latte, and more. We also offer a selection of teas and hot chocolate for those who prefer non-coffee options. Our pastries are freshly baked daily and include croissants, muffins, scones, and cookies.</p>
-                <p>We take pride in using high-quality ingredients and sourcing our coffee beans from sustainable farms. Our baristas are trained to craft each drink with care and attention to detail, ensuring that every cup is a perfect experience for our customers. We also offer a loyalty program for our regular customers.</p>
+                <p>We take pride in using high-quality ingredients and sourcing our coffee beans from sustainable farms. Our baristas are trained to craft each drink with care and attention to detail, so every cup is a perfect experience. We also offer a loyalty program for our regular customers.</p>
                 <figure>
                     <h3>Our Location</h3>
                     <img src="image/outdoor.jpeg" alt="Exterior view of our cafe storefront at night">
-                    <figcaption>Our beautiful cafe storefront located in the heart of the city.</figcaption>
+                    <figcaption>Our beautiful cafe storefront, located in the heart of the city.</figcaption>
                 </figure>
             </section>
             <section id="menu">
                 <h2>Menu Specialties</h2>
-                <article>
-                    <h3>Matcha Latte</h3>
-                    <figure>
-                        <img src="image/matsha.png" alt="A fresh cup of matcha latte">
-                        <p>Matcha is made from 100% finely ground, specially grown green tea leaves (Camellia sinensis). Its key natural components include <strong>L-theanine</strong>, high levels of <strong>catechins</strong>, and <strong>caffeine</strong>.</p>
-                        <p>Price: $7.00</p>
-                    </figure>
-                    <aside>
-                        <h4>Ingredients:</h4>
-                        <ul>
-                            <li>Matcha green tea powder</li>
-                            <li>Hot water (not boiling)</li>
-                            <li>Warm milk</li>
-                            <li>Honey or maple syrup (optional)</li>
-                        </ul>
-                        <h4>Preparation Steps:</h4>
-                        <ol>
-                            <li>Sift 1-2 teaspoons of matcha powder into a bowl to remove any lumps.</li>
-                            <li>Add a small amount of hot water (about 70-80°C) to the matcha powder.</li>
-                            <li>Whisk vigorously in a "W" pattern until frothy.</li>
-                            <li>Pour warm milk into your cup and serve.</li>
-                        </ol>
-                    </aside>
-                </article>
-                <article>
-                    <h3>Chocolate Milkshake</h3>
-                    <figure>
-                        <img src="image/milk_shek.png" alt="Rich chocolate milkshake with whipped cream">
-                        <p>A classic milkshake made from a delicious blend of whole <strong>milk</strong>, rich <strong>ice cream</strong>, and sweet chocolate syrup, topped with <strong>whipped cream</strong>.</p>
-                        <p>Price: $5.50</p>
-                    </figure>
-                </article>
-                <article>
-                    <h3>Fresh Strawberry Mocktail</h3>
-                    <figure>
-                        <img src="image/our_fresh_juice.png" alt="Fresh strawberry mint mocktail">
-                        <p>Crafted with sweet <strong>fresh strawberries</strong>, fragrant <strong>mint leaves</strong>, sparkling <strong>soda water</strong>, and ice for an invigorating flavor.</p>
-                        <p>Price: $5.00</p>
-                    </figure>
-                </article>
-                <article>
-                    <h3>Classic Espresso</h3>
-                    <figure>
-                        <img src="image/the_best_coffe.png" alt="A rich cup of espresso coffee">
-                        <p>Brewed by forcing hot water through finely-ground espresso coffee beans. Rich in <strong>crema</strong> and concentrated <strong>caffeine</strong>.</p>
-                        <p>Price: $3.00</p>
-                    </figure>
-                </article>
-                <article>
-                    <h3>Cappuccino</h3>
-                    <figure>
-                        <img src="image/best_capationo.png" alt="A freshly brewed cappuccino with latte art">
-                        <p>Crafted with equal parts of bold <strong>espresso</strong>, warm <strong>steamed milk</strong>, and a thick layer of velvety <strong>milk foam</strong>.</p>
-                        <p>Price: $4.00</p>
-                    </figure>
-                </article>
-                <article>
-                    <h3>Iced Latte</h3>
-                    <figure>
-                        <img src="image/ice_cofe.png" alt="A refreshing iced latte">
-                        <p>Made with a double shot of smooth <strong>espresso</strong>, chilled <strong>milk</strong>, and clear <strong>ice cubes</strong> for a refreshing experience.</p>
-                        <p>Price: $4.50</p>
-                    </figure>
-                </article>
+                <div class="menu-grid">
+                    <article>
+                        <h3>Matcha Latte</h3>
+                        <figure>
+                            <img src="image/matsha.png" alt="A fresh cup of matcha latte">
+                            <p>Matcha is made from 100% finely ground, specially grown green tea leaves (Camellia sinensis). Its key natural components include <strong>L-theanine</strong>, high levels of <strong>catechins</strong>, and <strong>caffeine</strong>.</p>
+                            <p>Price: $7.00</p>
+                        </figure>
+                        <aside>
+                            <h4>Ingredients:</h4>
+                            <ul>
+                                <li>Matcha green tea powder</li>
+                                <li>Hot water (not boiling)</li>
+                                <li>Warm milk</li>
+                                <li>Honey or maple syrup (optional)</li>
+                            </ul>
+                            <h4>Preparation Steps:</h4>
+                            <ol>
+                                <li>Sift 1-2 teaspoons of matcha powder into a bowl to remove any lumps.</li>
+                                <li>Add a small amount of hot water (about 70-80°C) to the matcha powder.</li>
+                                <li>Whisk vigorously in a "W" pattern until frothy.</li>
+                                <li>Pour warm milk into your cup and serve.</li>
+                            </ol>
+                        </aside>
+                    </article>
+                    <article>
+                        <h3>Chocolate Milkshake</h3>
+                        <figure>
+                            <img src="image/milk_shek.png" alt="Rich chocolate milkshake with whipped cream">
+                            <p>A classic milkshake made from a delicious blend of whole <strong>milk</strong>, rich <strong>ice cream</strong>, and sweet chocolate syrup, topped with <strong>whipped cream</strong>.</p>
+                            <p>Price: $5.50</p>
+                        </figure>
+                        <aside>
+                            <h4>Ingredients:</h4>
+                            <ul>
+                                <li>2 scoops of vanilla ice cream</li>
+                                <li>1 cup of cold whole milk</li>
+                                <li>2 tablespoons of chocolate syrup</li>
+                                <li>Whipped cream</li>
+                                <li>Chocolate shavings (optional)</li>
+                            </ul>
+                            <h4>Preparation Steps:</h4>
+                            <ol>
+                                <li>Add the milk, ice cream, and chocolate syrup to a blender.</li>
+                                <li>Blend for 30-45 seconds until smooth and creamy.</li>
+                                <li>Pour into a tall glass.</li>
+                                <li>Top with whipped cream and chocolate shavings, then serve.</li>
+                            </ol>
+                        </aside>
+                    </article>
+                    <article>
+                        <h3>Fresh Strawberry Mocktail</h3>
+                        <figure>
+                            <img src="image/our_fresh_juice.png" alt="Fresh strawberry mint mocktail">
+                            <p>Crafted with sweet <strong>fresh strawberries</strong>, fragrant <strong>mint leaves</strong>, sparkling <strong>soda water</strong>, and ice for an invigorating flavor.</p>
+                            <p>Price: $5.00</p>
+                        </figure>
+                        <aside>
+                            <h4>Ingredients:</h4>
+                            <ul>
+                                <li>6 fresh strawberries</li>
+                                <li>8 fresh mint leaves</li>
+                                <li>1 tablespoon of sugar or honey</li>
+                                <li>Juice of half a lime</li>
+                                <li>Ice cubes</li>
+                                <li>Chilled soda water</li>
+                            </ul>
+                            <h4>Preparation Steps:</h4>
+                            <ol>
+                                <li>Muddle the strawberries, mint, sweetener, and lime juice in a glass.</li>
+                                <li>Fill the glass with ice cubes.</li>
+                                <li>Top with chilled soda water.</li>
+                                <li>Stir gently and garnish with a mint leaf.</li>
+                            </ol>
+                        </aside>
+                    </article>
+                    <article>
+                        <h3>Classic Espresso</h3>
+                        <figure>
+                            <img src="image/the_best_coffe.png" alt="A rich cup of espresso coffee">
+                            <p>Brewed by forcing hot water through finely ground espresso coffee beans. Rich in <strong>crema</strong> and concentrated <strong>caffeine</strong>.</p>
+                            <p>Price: $3.00</p>
+                        </figure>
+                        <aside>
+                            <h4>Ingredients:</h4>
+                            <ul>
+                                <li>18 g of finely ground espresso beans</li>
+                                <li>Hot filtered water (about 93°C)</li>
+                            </ul>
+                            <h4>Preparation Steps:</h4>
+                            <ol>
+                                <li>Grind the beans finely and place them in the portafilter.</li>
+                                <li>Level and tamp the grounds firmly and evenly.</li>
+                                <li>Brew for 25-30 seconds until you get about 36 g of espresso.</li>
+                                <li>Serve immediately in a warmed cup.</li>
+                            </ol>
+                        </aside>
+                    </article>
+                    <article>
+                        <h3>Cappuccino</h3>
+                        <figure>
+                            <img src="image/best_capationo.png" alt="A freshly brewed cappuccino with latte art">
+                            <p>Crafted with equal parts of bold <strong>espresso</strong>, warm <strong>steamed milk</strong>, and a thick layer of velvety <strong>milk foam</strong>.</p>
+                            <p>Price: $4.00</p>
+                        </figure>
+                        <aside>
+                            <h4>Ingredients:</h4>
+                            <ul>
+                                <li>1 shot of espresso (about 30 ml)</li>
+                                <li>120 ml of cold milk</li>
+                                <li>Cocoa powder (optional)</li>
+                            </ul>
+                            <h4>Preparation Steps:</h4>
+                            <ol>
+                                <li>Brew the espresso directly into your cup.</li>
+                                <li>Steam the milk to about 60-65°C until thick and velvety.</li>
+                                <li>Pour the steamed milk over the espresso, then spoon the foam on top.</li>
+                                <li>Dust with cocoa powder if you like, and serve.</li>
+                            </ol>
+                        </aside>
+                    </article>
+                    <article>
+                        <h3>Iced Latte</h3>
+                        <figure>
+                            <img src="image/ice_cofe.png" alt="A refreshing iced latte">
+                            <p>Made with a double shot of smooth <strong>espresso</strong>, chilled <strong>milk</strong>, and clear <strong>ice cubes</strong> for a refreshing experience.</p>
+                            <p>Price: $4.50</p>
+                        </figure>
+                        <aside>
+                            <h4>Ingredients:</h4>
+                            <ul>
+                                <li>2 shots of espresso (about 60 ml)</li>
+                                <li>180 ml of cold milk</li>
+                                <li>Ice cubes</li>
+                                <li>Vanilla or caramel syrup (optional)</li>
+                            </ul>
+                            <h4>Preparation Steps:</h4>
+                            <ol>
+                                <li>Brew a double shot of espresso and let it cool for a minute.</li>
+                                <li>Fill a tall glass with ice cubes.</li>
+                                <li>Pour in the cold milk, then add syrup if you like.</li>
+                                <li>Pour the espresso over the top and stir gently.</li>
+                            </ol>
+                        </aside>
+                    </article>
+                </div>
             </section>
             <section id="best-drink">
                 <h2>Best Drink</h2>
                 <p>Our customers' top choices for coffee and warm beverages.</p>
             </section>
             <section id="reviews">
-                <h2>Customer Review</h2>
+                <h2>Customer Reviews</h2>
                 <figure>
                     <blockquote>
                         <p>"This is literally the <strong>best</strong> coffee shop in town! Their matcha latte is <em>unbelievably</em> smooth and delicious."</p>
@@ -117,42 +199,42 @@
                 </figure>
             </section>
             <section id="contact">
-    <h2>Contact Us</h2>
-    <form id="contact-form" action="#" method="post">
-        <div class="form-group">
-            <label for="user-name">Your Name *</label>
-            <input type="text" id="user-name" name="name" placeholder="E.g. John Doe" required>
-        </div>
-        <div class="form-group">
-            <label for="user-email">Your Email *</label>
-            <input type="email" id="user-email" name="email" placeholder="name@example.com" required>
-        </div>
-        <div class="form-group">
-            <label for="user-phone">Phone Number</label>
-            <input type="tel" id="user-phone" name="phone" placeholder="+20 1xx xxx xxxx">
-        </div>
-        <div class="form-group">
-            <label for="contact-reason">Reason for Contacting</label>
-            <select id="contact-reason" name="reason">
-                <option value="general">General Inquiry</option>
-                <option value="reservation">Table Reservation</option>
-                <option value="feedback">Feedback / Suggestion</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="user-message">Your Message *</label>
-            <textarea id="user-message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
-        </div>
-        <div class="form-group checkbox-group">
-            <input type="checkbox" id="terms-consent" name="consent" required>
-            <label for="terms-consent">I agree to be contacted regarding my message.</label>
-        </div>
-        <button type="submit">Send Message</button>
-    </form>
-</section>
-<!-- this  is  a  test number  not  real -->
-<a href="tel:+201000000000">Call us</a>
-<a href="https://wa.me/201000000000?text=Hello%20I%20have%20a%20question">Chat on WhatsApp</a>
+                <h2>Contact Us</h2>
+                <form id="contact-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="user-name">Your Name *</label>
+                        <input type="text" id="user-name" name="name" placeholder="E.g. John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="user-email">Your Email *</label>
+                        <input type="email" id="user-email" name="email" placeholder="name@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="user-phone">Phone Number</label>
+                        <input type="tel" id="user-phone" name="phone" placeholder="+20 1xx xxx xxxx">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-reason">Reason for Contacting</label>
+                        <select id="contact-reason" name="reason">
+                            <option value="general">General Inquiry</option>
+                            <option value="reservation">Table Reservation</option>
+                            <option value="feedback">Feedback / Suggestion</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="user-message">Your Message *</label>
+                        <textarea id="user-message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="terms-consent" name="consent" required>
+                        <label for="terms-consent">I agree to be contacted regarding my message.</label>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+            <!-- this is a test number, not real -->
+            <a class="contact-link" href="tel:+201000000000">Call us</a>
+            <a class="contact-link" href="https://wa.me/201000000000?text=Hello%20I%20have%20a%20question">Chat on WhatsApp</a>
         </main>
         <footer>
             <p>&copy; 2026 Cafe. All rights reserved.</p>
