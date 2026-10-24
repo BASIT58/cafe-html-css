@@ -117,9 +117,39 @@
                 </figure>
             </section>
             <section id="contact">
-                <h2>Contact Us</h2>
-                <p>Feel free to reach out to us via email or follow us on our social media platforms!</p>
-            </section>
+    <h2>Contact Us</h2>
+    <form id="contact-form" action="#" method="post">
+        <div class="form-group">
+            <label for="user-name">Your Name *</label>
+            <input type="text" id="user-name" name="name" placeholder="E.g. John Doe" required>
+        </div>
+        <div class="form-group">
+            <label for="user-email">Your Email *</label>
+            <input type="email" id="user-email" name="email" placeholder="name@example.com" required>
+        </div>
+        <div class="form-group">
+            <label for="user-phone">Phone Number</label>
+            <input type="tel" id="user-phone" name="phone" placeholder="+20 1xx xxx xxxx">
+        </div>
+        <div class="form-group">
+            <label for="contact-reason">Reason for Contacting</label>
+            <select id="contact-reason" name="reason">
+                <option value="general">General Inquiry</option>
+                <option value="reservation">Table Reservation</option>
+                <option value="feedback">Feedback / Suggestion</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="user-message">Your Message *</label>
+            <textarea id="user-message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+        </div>
+        <div class="form-group checkbox-group">
+            <input type="checkbox" id="terms-consent" name="consent" required>
+            <label for="terms-consent">I agree to be contacted regarding my message.</label>
+        </div>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
         </main>
         <footer>
             <p>&copy; 2026 Cafe. All rights reserved.</p>

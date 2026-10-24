@@ -107,9 +107,7 @@ figcaption {
     font-style: italic;
 }
 
-/* ==========================================
-   5. Menu Articles Cards
-   ========================================== */
+
 #menu article {
     background-color: #fdfbf7;
     border: 1px solid #e8d5c4;
@@ -131,9 +129,6 @@ aside ul, aside ol {
     padding-left: 20px;
 }
 
-/* ==========================================
-   6. Customer Reviews & Footer
-   ========================================== */
 blockquote {
     background-color: blanchedalmond;
     border-left: 5px solid rgb(98, 44, 25);
@@ -154,7 +149,63 @@ footer {
     margin-top: 40px;
     border-radius: 16px 16px 0 0;
 }
+/* ==========================================
+   Simple Contact Form (سيمبل ونظيف)
+   ========================================== */
 
+#contact-form {
+    margin-top: 15px;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form input[type="tel"],
+#contact-form select,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* التنسيق للـ Checkbox عشان يفضل في سطر واحد هادي مع النص */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin: 0;
+    width: 16px;
+    height: 16px;
+}
+
+.checkbox-group label {
+    margin: 0;
+    cursor: pointer;
+}
+
+#contact-form button[type="submit"] {
+    background-color: rgb(98, 44, 25);
+    color: blanchedalmond;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+#contact-form button[type="submit"]:hover {
+    opacity: 0.9;
+}
 footer p {
     margin: 0;
 }
